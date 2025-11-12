@@ -40,6 +40,6 @@ Content-Disposition: form-data; name="birthdate"
 Content-Disposition: form-data; name="file"; filename="catt.jpeg"
 Content-Type: image/jpeg
 
-< ./dog.jpg
+< ./catt.jpeg
 --MyBoundary--
 
