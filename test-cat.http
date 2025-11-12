@@ -1,0 +1,45 @@
+### all cats
+GET http://127.0.0.1:3000/api/v1/cats
+
+###  id
+GET http://127.0.0.1:3000/api/v1/cats/9592
+
+### Add new cat with JSON
+POST http://127.0.0.1:3000/api/v1/cats
+Content-Type: application/json
+
+{
+  "cat_name": "New Cat",
+  "weight": 5,
+  "owner": 3333,
+  "filename": "https://loremflickr.com/320/240/cat",
+  "birthdate": "2022-01-01"
+}
+
+### Add new cat with image (multipart/form-data)
+POST http://127.0.0.1:3000/api/v1/cats HTTP/1.1
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="cat_name"
+
+Misu
+--MyBoundary
+Content-Disposition: form-data; name="weight"
+
+6
+--MyBoundary
+Content-Disposition: form-data; name="owner"
+
+3602
+--MyBoundary
+Content-Disposition: form-data; name="birthdate"
+
+2023-10-08
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="catt.jpeg"
+Content-Type: image/jpeg
+
+< ./dog.jpg
+--MyBoundary--
+
